@@ -11,7 +11,12 @@ while True:
     user_input = input("Would you like to add a new student? y(yes),n(no) \n").lower()
     
     if user_input == "y" or user_input == "yes":
-
+        gpa_list = []
+        name = input("Enter the student's name: \n")
+        gpa = float(input("Enter student GPA for each subject. Enter -1 to stop entering GPA. \n"))
+        while gpa != -1:
+            gpa_list.append(gpa)
+            gpa = float(input())
     elif user_input == "n" or user_input == "no":
         break
     else:
